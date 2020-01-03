@@ -1,5 +1,15 @@
 # arxiv-crawler
-Crawl [arXiv](http://arxiv.org/) papers' Title & Abstract info and written into a CSV file
+Crawling [arXiv](http://arxiv.org/) papers' Title & Abstract info and written into a CSV file.
+
+### Introduction
+In default, the crawler will retrieve up to 2,000 papers/articles
+from `Computer Science` category.
+
+The articles must have one of terms below in their Title and Abstract:
+`['drone', 'uav', '"remote sensing"', 'remote-sensing']`
+
+Besides, they must be originally announced from 2000.01.01 to 2020.12.31.
+
 
 ### Modifying crawling parameters
 Please visit https://arxiv.org/search/advanced to figure out all possible params
@@ -40,6 +50,9 @@ Retrieved paper = 3
 
 ### Results
 A csv file named `ArXiv.csv` will be created in the same location of the crawlers/caller
+
+### Technology
+The Crawler uses [BeautifulSoup](https://pypi.org/project/beautifulsoup4/) library to parse the HTML document to extract the needed information.
 
 ## Future work
 Figure out to extract Keywords from Title & Abstract

@@ -26,7 +26,7 @@ year_to = 2020
 
 # With 100 articles in one page (URL), the current search will return 20 pages (under 2000 articles)
 page_size = 100
-crawling_pages = 3
+crawling_pages = 20
 
 """
 Start building the advanced search URLs for ArXiv
