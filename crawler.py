@@ -1,6 +1,7 @@
 import csv
 import urllib.parse
 import urllib.request
+import datetime
 
 from bs4 import BeautifulSoup
 
@@ -67,7 +68,7 @@ author_separator = ','
 # Lambda function to retrieve a plain Text from HTML element
 cleanText = lambda text: text.replace('\\n', '').strip()
 
-with open('ArXiv.csv', 'w') as file:
+with open(f'ArXiv-{datetime.date.today()}.csv', 'w', newline='', encoding='utf-8') as file:
   writer = csv.writer(file)
   writer.writerow(['#', 'Title', 'Authors', 'Abstract', 'Announced', 'URL', 'DOI'])
 
